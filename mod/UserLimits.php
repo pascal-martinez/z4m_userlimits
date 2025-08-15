@@ -38,6 +38,14 @@ class UserLimits {
     static public function getInfos() {
         $userAccounts = [];
         $total = \UserManager::getSearchedUsers(NULL, NULL, ['status' => 1], 'user_id', $userAccounts);
+        $uncountedUsers = MOD_Z4M_USERLIMITS_UNCOUNTED_USER_ACCOUNTS;
+        if (is_array($uncountedUsers) && count($uncountedUsers) > 0) {
+            foreach ($userAccounts as $user) {
+                if (in_array($user['login_name'], $uncountedUsers)) {
+                    $total--;
+                }
+            }
+        }
         return [
             'user_accounts' => $total,
             'max_user_accounts' => MOD_Z4M_USERLIMITS_MAX_USER_ACCOUNTS
