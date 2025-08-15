@@ -24,6 +24,11 @@ For example:
 // Maximum of 10 user accounts
 define('MOD_Z4M_USERLIMITS_MAX_USER_ACCOUNTS', 10);
 ```
+To exclude one or several login names to the maximum user accounts calculation, add a definition of the MOD_Z4M_USERLIMITS_UNCOUNTED_USER_ACCOUNTS PHP constant in the [`config.php`](/../../../znetdk4mobile/blob/master/applications/default/app/config.php) script of the application.  
+```php
+// Two user accounts are uncounted
+define('MOD_Z4M_USERLIMITS_UNCOUNTED_USER_ACCOUNTS', ['helvin_c', 'joe_logan']);
+```
 To forbid declaration of user accounts with **full menu access** except for the user whose login name is `superuser`, add a definition of the `MOD_Z4M_USERLIMITS_FULL_MENU_ACCESS_RESTRICTION` PHP constant in the [`config.php`](/../../../znetdk4mobile/blob/master/applications/default/app/config.php) script of the application as shown below.  
 For example:
 ```php

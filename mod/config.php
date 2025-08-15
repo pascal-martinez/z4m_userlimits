@@ -18,8 +18,8 @@
  * --------------------------------------------------------------------
  * Parameters of the ZnetDK 4 Mobile User limits module
  *
- * File version: 1.0
- * Last update: 07/13/2025
+ * File version: 1.1
+ * Last update: 08/15/2025
  */
 
 /**
@@ -27,6 +27,13 @@
  * @return int Number of user accounts
  */
 define('MOD_Z4M_USERLIMITS_MAX_USER_ACCOUNTS', 5);
+
+/**
+ * User accounts that are uncounted
+ * @return NULL|Array The login name of the uncounted user accounts. If NULL,
+ * no user account is uncounted. 
+ */
+define('MOD_Z4M_USERLIMITS_UNCOUNTED_USER_ACCOUNTS', NULL);
 
 /**
  * User accounts allowed to get full menu access
@@ -40,9 +47,9 @@ define('MOD_Z4M_USERLIMITS_FULL_MENU_ACCESS_RESTRICTION', NULL);
  * Module version number
  * @return string Version
  */
-define('MOD_Z4M_USERLIMITS_VERSION_NUMBER','1.0');
+define('MOD_Z4M_USERLIMITS_VERSION_NUMBER','1.1');
 /**
  * Module version date
  * @return string Date in W3C format
  */
-define('MOD_Z4M_USERLIMITS_VERSION_DATE','2025-07-13');
+define('MOD_Z4M_USERLIMITS_VERSION_DATE','2025-08-15');
